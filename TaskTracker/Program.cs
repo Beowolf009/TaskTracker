@@ -1,10 +1,33 @@
 namespace TaskTracker;
 
+
+
 static class Program
 {
-    /// <summary>
-    ///  The main entry point for the application.
-    /// </summary>
+   public class Task
+    {
+        public string Title { get; set; }
+        public Task(string title)
+        {
+            Title = title;
+        }
+    }
+
+    public class TaskCreation
+    {
+        public static Task CreateTask()
+        {
+            //prompt the user to enter a title
+            Console.WriteLine("Enter a title for the task.");
+
+            //read user input
+            string title = Console.ReadLine();
+            //create a new task object with the entered title
+            Task task = new Task(title);
+
+            return task;
+        }
+    }
     [STAThread]
 
     
