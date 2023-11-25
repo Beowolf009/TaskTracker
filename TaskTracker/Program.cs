@@ -4,7 +4,9 @@ namespace TaskTracker;
 
 static class Program
 {
-   public class Task
+    
+
+        public class Task
     {
         public string Title { get; set; }
         public Task(string title)
@@ -28,6 +30,8 @@ static class Program
             return task;
         }
     }
+        
+   
     [STAThread]
 
     
@@ -37,9 +41,11 @@ static class Program
         // see https://aka.ms/applicationconfiguration.
         ApplicationConfiguration.Initialize();
         Application.Run(new Form1());
+        
+        
 
-        {
-            List<Task> taskList = new List<Task>();
+        //create a list to store tasks
+        List<Task> taskList = new List<Task>();
 
             while (true)
             {
@@ -99,9 +105,8 @@ static class Program
                 }
             }
             
-            
+
         
-        
-        }
-    }    
 }
+}
+      
